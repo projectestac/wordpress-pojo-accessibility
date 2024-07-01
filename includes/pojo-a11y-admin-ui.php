@@ -163,6 +163,14 @@ class Pojo_A11y_Admin_UI {
 	}
 
 	public function __construct() {
+
+        // XTEC ************ ESBORRAT - Removed advertisements.
+        // 24.07.01 @aginard
+        if (!is_xtec_super_admin()) {
+            return;
+        }
+        // ************ FI
+
 		add_action( 'admin_notices', array( &$this, 'admin_notices' ) );
 		add_action( 'wp_ajax_a11y_install_elementor_set_admin_notice_viewed', array( &$this, 'ajax_a11y_install_elementor_set_admin_notice_viewed' ) );
 		add_filter( 'admin_footer_text', [ $this, 'admin_footer_text' ] );
