@@ -5,6 +5,13 @@ class Pojo_A11y_Settings {
 
 	public $menu_slug = null;
 
+	// XTEC ************ AFEGIT - Fixing: Creation of dynamic property Pojo_A11y_Settings::$_page_title is deprecated
+	// 2025.05.16 @corentin.robin
+	public $_page_title;
+	public $_page_menu_title;
+	public $_menu_parent;
+	// ************ FI
+
 	const PAGE_ID = 'pojo-a11y';
 	const SETTINGS_PAGE = 'toplevel_page_accessibility-settings';
 	const TOOLBAR_PAGE = 'accessibility_page_accessibility-toolbar';
